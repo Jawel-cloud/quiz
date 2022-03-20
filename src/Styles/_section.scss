@@ -1,0 +1,625 @@
+// Backgrounds:
+.background_start {
+    background-image: url('../Assets/Backgrounds/choose_background.jpg');
+    background-size: cover;
+}
+
+.hist {
+    &_start {
+        background-image: url('../Assets/Backgrounds/historia/start_background.jpg');
+    }
+
+    &_select {
+        background-image: url('../Assets/Backgrounds/historia/select_background.jpg');
+    }
+
+    &_score {
+        background-image: url('../Assets/Backgrounds/historia/score_background.jpg');
+    }
+}
+
+.prog {
+    &_start {
+        background-image: url('../Assets/Backgrounds/programowanie/start_background.jpg')
+    }
+
+    &_select {
+        background-image: url('../Assets/Backgrounds/programowanie/select_background.jpg')
+    }
+
+    &_score {
+        background-image: url('../Assets/Backgrounds/programowanie/score_background.jpg')
+    }
+}
+
+.kult {
+    &_start {
+        background-image: url('../Assets/Backgrounds/kultura/start_background.jpg')
+    }
+
+    &_select {
+        background-image: url('../Assets/Backgrounds/kultura/select_background.jpg')
+    }
+
+    &_score {
+        background-image: url('../Assets/Backgrounds/kultura/score_background.jpg')
+    }
+}
+
+.tech {
+    &_start {
+        background-image: url('../Assets/Backgrounds/technologia/start_background.jpg')
+    }
+
+    &_select {
+        background-image: url('../Assets/Backgrounds/technologia/select_background.jpg')
+    }
+
+    &_score {
+        background-image: url('../Assets/Backgrounds/technologia/score_background.jpg')
+    }
+}
+
+.moto {
+    &_start {
+        background-image: url('../Assets/Backgrounds/motoryzacja/start_background.jpg')
+    }
+
+    &_select {
+        background-image: url('../Assets/Backgrounds/motoryzacja/select_background.jpg')
+    }
+
+    &_score {
+        background-image: url('../Assets/Backgrounds/motoryzacja/score_background.jpg')
+    }
+}
+
+// Nagłówki
+.title {
+    display: inline-block;
+    padding: 2vh 24vh;
+    margin-bottom: 5vh;
+
+    &.title_tech {
+        background-image: linear-gradient(90deg, $c-Gray_opacity0, $c-ElectricViolet_opacity4 50%, $c-Gray_opacity0 100%);
+    }
+
+    &.title_prog {
+        background-image: linear-gradient(90deg, $c-Gray_opacity0, $c-ElectricViolet_opacity4 50%, $c-Gray_opacity0 100%);
+    }
+
+    &.title_kult {
+        background-image: linear-gradient(90deg, $c-Gray_opacity0, $c-DustyGray_opacity8 50%, $c-Gray_opacity0 100%);
+    }
+
+    &.title_moto {
+        background-image: linear-gradient(90deg, $c-Gray_opacity0, $c-ScienceBlue_opacity8 50%, $c-Gray_opacity0 100%);
+    }
+
+    &.title_hist {
+        background-image: linear-gradient(90deg, $c-Gray_opacity0, $c-CoralReef_opacity8 50%, $c-Gray_opacity0 100%);
+    }
+}
+
+//Buttons:
+button {
+    cursor: pointer;
+}
+
+.button-start {
+    @include widHeiPadMar(28vh, 8vh, 0 0 0 4vh, 2vh 0 0 0); // padding/margin: (t r b l)
+    color: $c-white;
+    border-radius: 1vh;
+    text-align: left;
+    position: relative;
+}
+
+.tech_btn {
+    background-image: linear-gradient(45deg, $c-BlackRock 30%, $c-ElectricViolet 100%);
+    border: 1px solid $c-ElectricViolet;
+    @include boxShadow(2px 2px 2px $c-DaisyBush);
+}
+
+.tech_btn:hover {
+    background-image: linear-gradient(45deg, $c-BlackRock, $c-VioletEggplant 100%);
+}
+
+.prog_btn {
+    background-image: linear-gradient(45deg, $c-BlackRock, $c-DaisyBush 100%);
+    border: 1px solid $c-LilacBush;
+    @include boxShadow(2px 2px 2px $c-DaisyBush);
+}
+
+.prog_btn:hover {
+    background-image: linear-gradient(45deg, $c-BlackRock, $c-VioletEggplant 100%);
+}
+
+.hist_btn {
+    background-image: linear-gradient(45deg, $c-CocoaBrown, $c-WoodyBrown 20%, $c-CoralReef 100%);
+    border: 1px solid $c-white;
+    @include boxShadow(2px 2px 2px $c-CoralReef);
+}
+
+.hist_btn:hover {
+    background-image: linear-gradient(75deg, $c-CocoaBrown, $c-WoodyBrown 80%, $c-CoralReef 100%);
+}
+
+.moto_btn {
+    background-image: linear-gradient(45deg, $c-GulfBlue 70%, $c-ScienceBlue 100%);
+    border: 1px solid $c-white;
+    @include boxShadow(2px 2px 2px $c-BlueRibbon);
+
+}
+
+.moto_btn:hover {
+    background-image: linear-gradient(45deg, $c-BlueRibbon 70%, $c-ToreaBay 100%);
+}
+
+.kult_btn {
+    background-image: linear-gradient(65deg, $c-white, $c-DustyGray 40%, $c-Emperor 100%);
+    border: 1px solid $c-white;
+    @include boxShadow(2px 2px 2px $c-white);
+}
+
+.kult_btn:hover {
+    background-image: linear-gradient(65deg, $c-DustyGray 30%, $c-black 100%);
+}
+
+//Wrappers
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+    border: 0;
+    background-size: cover;
+}
+
+.home_wrapper {
+    text-align: center;
+    @include widHeiPadMar(100vw, 100vh, 10vh);
+    color: $c-white;
+    position: relative;
+
+    .Q-sign {
+        @include widHeiPadMar(10vh, auto, 0, 4vh);
+        @include positionYX(absolute, 0, 0);
+    }
+}
+
+.completeScore_wrapper {
+    @include myFlex();
+    flex-direction: row;
+    width: 60vw;
+    margin-bottom: 4vh;
+    position: relative;
+
+    .title_wrapper {
+        @include myFlex();
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .completeScore {
+        color: $c-white;
+        border-radius: 50%;
+        @include widHeiPadMar(14vh, 14vh);
+        line-height: 14vh;
+        border-color: $c-white;
+        font-size: 1.6rem;
+        @include positionYX(absolute, -3vh, 26.5vw);
+    }
+}
+
+.categorySite_wrapper {
+    text-align: center;
+    @include myFlex();
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.CategoryPage_wrapper {
+    position: relative;
+}
+
+.categoryImage {
+    box-sizing: content-box;
+    @include widHeiPadMar(7vh, 7vh, 0 4vh 3vh 4vh, 0 0 1vh 0); // padding/margin: (t r b l)
+    border-bottom: 2px solid $c-VioletEggplant;
+    float: none;
+}
+
+.categoryName {
+    width: 16vh;
+    color: $c-Alto;
+    font-weight: 500;
+    font-size: 0.7rem;
+    margin: 0 0 6vh 0; //t r b l
+}
+
+.categoryButton {
+    background-image: linear-gradient(45deg, $c-BlackRock, $c-DaisyBush 100%);
+    border: 1px solid $c-LilacBush;
+    border-radius: 5%;
+    background-color: $c-ToreaBay;
+    @include boxShadow(3px 3px 3px $c-DaisyBush);
+    color: $c-white;
+    @include widHeiPadMar(22vh, 22vh, 0 0 0 2vh, 2vh); // padding/margin: (t r b l)
+
+    .categoryImage {
+        padding: 0 8vh 3vh 1vh; // t r b l
+        border-bottom: 2px solid $c-VioletEggplant;
+        float: left;
+        margin: 4vh 0 1vh 0; //t r b l
+    }
+
+    .categoryName {
+        text-align: left;
+    }
+}
+
+.categoryButton:hover {
+    background-image: linear-gradient(45deg, $c-BlackRock, $c-VioletEggplant 100%);
+}
+
+.backAndX_wrapper {
+    @include positionYX(absolute, 12vh);
+    right: 15vw;
+
+    button {
+        background-color: transparent;
+        color: $c-white;
+        font-size: 1.4rem;
+    }
+}
+
+.footer {
+    @include positionYX(absolute, 18vh);
+    right: 10vw;
+    z-index: 3;
+
+    div {
+        margin: 1vh 0 2vh 0;
+    }
+
+    .scoreMenu_Wrapper {
+        @include widHeiPadMar(16vh, auto);
+
+        .score_categoryButton {
+            border: 1px;
+            border-radius: 5%;
+            background-color: $c-ToreaBay;
+            color: $c-white;
+            @include widHeiPadMar(12vh, 12vh, 0 0 0 1vh, 2vh); // padding/margin: (t r b l)
+
+            .categoryImage {
+                border-bottom: 1px solid $c-VioletEggplant;
+                float: left;
+                @include widHeiPadMar(4vh, 4vh, 0 4.8vh 1.8vh 0.6vh, 2vh 0 0.4vh 0) // padding/margin: (t r b l)
+            }
+
+            .categoryName {
+                text-align: left;
+                width: 10vh;
+                font-size: 0.5rem;
+            }
+        }
+    }
+}
+
+//Choices and answers
+.choices_wrapper {
+    @include widHeiPadMar(fit-content, auto, 0.5vh, 0 auto); // padding/margin: (t r b l)
+    border-radius: 2vh;
+    transition: background-color 1s;
+
+    &.correct {
+        background-color: $c-PastelGreen_opacity8;
+    }
+
+    &.incorrect {
+        background-color: $c-Japonica_opacity8;
+    }
+}
+
+.choiceButton {
+    @include widHeiPadMar(28vh, 8vh, 0, 4vh); // padding/margin: (t r b l)
+    border-radius: 1.2vh;
+    position: relative;
+    color: $c-white;
+}
+
+.quizComp_wrapper {
+    height: 8vh;
+    font-size: 0;
+
+    .choiceButton {
+        margin: 0 2vh 1vh 2vh;
+    }
+}
+
+.choice {
+    border-radius: 1.2vh;
+    color: $c-white;
+    @include widHeiPadMar(auto, auto, 1.4vh 10vh, 1vh 0 0 0); // padding/margin: (t r b l)
+}
+
+.ok_wrapper {
+    position: relative;
+}
+
+.ok {
+    @extend %gradient_placeholder;
+    border-radius: 50%;
+    line-height: 6vh;
+    @include positionYX(absolute, -3vh, -1.5vw);
+    @include widHeiPadMar(6vh, 6vh);
+}
+
+.ok_icon {
+    @include widHeiPadMar(4vh, 4vh, 0, 1vh); // padding/margin: (t r b l)
+}
+
+.start_icon {
+    @include positionYX(absolute, 0.6vh);
+    right: 0;
+    @include widHeiPadMar(7vh, 7vh);
+}
+
+.ok_button {
+    @extend %gradient_placeholder;
+    border-radius: 50%;
+    @include widHeiPadMar(6vh, 6vh);
+    line-height: 6vh;
+    @include positionYX(absolute, 0);
+    right: 0;
+}
+
+.myAnswers_wrapper {
+    border: 1px solid $c-white;
+    border-radius: 2vh;
+    width: 40vh;
+    min-height: 100%;
+    margin: 2vh;
+    transition: background-color 1s;
+
+    &.correct {
+        background-color: $c-PastelGreen_opacity8;
+    }
+
+    &.incorrect {
+        background-color: $c-Japonica_opacity8;
+    }
+}
+
+//Others
+.Quiz_text {
+    @include widHeiPadMar(auto, 6vh, 0, 4vh 0 6vh 0); // padding/margin: (t r b l)
+}
+
+.pickedCategory {
+    @include widHeiPadMar(20vh, 20vh, 0, 2vh); // padding/margin: (t r b l)
+    border-radius: 5%;
+    border: 1px solid $c-white;
+    color: $c-white;
+    background-color: $c-Gray_opacity5;
+}
+
+.qestionDropWrapper {
+    @include myFlex();
+    justify-content: center;
+}
+
+.question {
+    margin: 2vh 2vh 4vh 2vh;
+    font-weight: 400;
+}
+
+%gradient_placeholder {
+    border: 1px solid $c-white;
+    background-image: linear-gradient(45deg, $c-Woodsmoke, $c-Shark 50%, $c-white_opacity 100%);
+    color: $c-white;
+}
+
+.score {
+    border-radius: 50%;
+    border: 1px solid $c-white;
+    @include widHeiPadMar(8vh, 8vh);
+    line-height: 8vh;
+    @include positionYX(absolute, -2vh, 68vw);
+}
+
+.App-header {
+    background-color: $c-Shark;
+    min-height: 100vh;
+    @include myFlex();
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: $c-white;
+}
+
+//Media
+
+
+@media (max-width: 1150px) {
+    .completeScore_wrapper {
+        width: 70vw;
+
+        .completeScore {
+            @include positionYX(absolute, -3vh, 31.5vw);
+        }
+    }
+}
+
+@media (max-width: 1000px) {
+    .completeScore_wrapper {
+        width: 80vw;
+
+        .completeScore {
+            @include positionYX(absolute, -3vh, 35vw);
+        }
+    }
+}
+
+@media (max-width: 900px) {
+    .completeScore_wrapper {
+        width: 90vw;
+
+        .completeScore {
+            @include positionYX(absolute, -3vh, 39vw);
+        }
+    }
+
+    .footer {
+        @include positionYX(absolute, 18vh);
+        right: 5vw;
+
+    }
+}
+
+@media (max-width: 800px) {
+    .completeScore_wrapper {
+        width: 100vw;
+
+        .completeScore {
+            @include positionYX(absolute, -3vh, 43vw);
+        }
+    }
+}
+
+@media (max-width: 700px) {
+    .completeScore_wrapper {
+        width: 100vw;
+
+        .completeScore {
+            @include positionYX(absolute, -3vh, 43vw);
+        }
+    }
+
+    .question {
+        margin: 2vh 1vh 4vh 1vh;
+        font-size: 0.9rem;
+    }
+
+    .footer {
+        @include positionYX(absolute, 18vh);
+        right: 2vw;
+        font-size: 0.9rem
+    }
+
+    .title {
+        padding: 2vh 18vh;
+        font-size: 0.9rem
+    }
+
+    .categoryButton {
+        @include widHeiPadMar(16vh, 16vh, 0 0 0 1.4vh, 1.4vh); // padding/margin: (t r b l)
+
+        .categoryImage {
+            @include widHeiPadMar(5vh, 5vh, 0 3vh 2.2vh 3vh, 0 0 1vh 0); // padding/margin: (t r b l)
+            padding: 0 6vh 2.2vh 0.8vh; // t r b l
+            margin: 3vh 0 0.8vh 0; //t r b l
+        }
+
+        .categoryName {
+            font-size: 0.5rem;
+        }
+    }
+
+}
+
+@media (max-width: 600px) {
+    .completeScore_wrapper {
+        width: 100vw;
+
+        .completeScore {
+            @include positionYX(absolute, -3vh, 41vw);
+        }
+    }
+
+    .question {
+        margin: 2vh 0 4vh 0;
+    }
+
+    .footer {
+        @include positionYX(absolute, 18vh);
+        right: 2vw;
+
+    }
+
+    .title {
+        padding: 2vh 14vh;
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 550px) {
+    .completeScore_wrapper {
+        width: 100vw;
+
+        .completeScore {
+            @include positionYX(absolute, -3vh, 41vw);
+        }
+    }
+
+    .title {
+        padding: 2vh 10vh;
+    }
+
+    .footer {
+        @include positionYX(absolute, 70vh);
+
+        div {
+            margin: 1vh 0 1vh 0;
+            font-size: 0.8rem
+        }
+
+        .scoreMenu_Wrapper {
+            @include widHeiPadMar(100vw, auto);
+
+            .score_categoryButton {
+                @include widHeiPadMar(9vh, 9vh, 0 0 0 0.8vh, 1.5vh); // padding/margin: (t r b l)
+
+                .categoryImage {
+                    @include widHeiPadMar(4vh, 4vh, 0.5vh 3.6vh 1vh 0.5vh, 1.5vh 0 0.3vh 0) // padding/margin: (t r b l)
+                }
+
+                .categoryName {
+                    visibility: hidden;
+                }
+            }
+        }
+    }
+
+    .backAndX_wrapper {
+        @include positionYX(absolute, 0);
+        right: 0vw;
+        width: 100vw;
+
+
+        button {
+            background-color: transparent;
+            color: $c-white;
+            font-size: 1.4rem;
+            margin: 0;
+        }
+
+        button:first-child {
+            margin: 0 38vw 0 0;
+        }
+
+        button:last-child {
+            margin: 0 0 0 38vw;
+        }
+    }
+
+    .Q-sign {
+        visibility: hidden;
+    }
+
+    .Quiz_text {
+        @include widHeiPadMar(auto, 4vh, 0, -6vh 0 8vh 0); // padding/margin: (t r b l)
+    }
+}

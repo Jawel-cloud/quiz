@@ -1,0 +1,70 @@
+/*colors
+****************************************************************/
+
+$c-white: #fff;
+$c-white_opacity: rgba(255, 255, 255, 0.7);
+$c-Gallery: #EBEBEB;
+$c-Alto: #D1D1D1;
+$c-Manatee: #93979F;
+$c-DustyGray: #9C9C9C;
+$c-DustyGray_opacity8: rgba(156, 156, 156, 0.8);
+$c-Emperor: #4F4F4F;
+$c-Gray_opacity5: rgba(68, 68, 68, 0.5);
+$c-Gray_opacity0: rgba(68, 68, 68, 0.0);
+$c-Shark: #282C34;
+$c-Woodsmoke: #161717;
+$c-black: #000;
+
+$c-VioletEggplant: #A41E7F;
+$c-ElectricViolet: #B600E0;
+$c-ElectricViolet_opacity4: rgba(182, 0, 224, 0.4);
+
+$c-ColdPurple: #BA9DD8;
+$c-LilacBush: #A57AD1;
+$c-DaisyBush: #62299b;
+$c-DaisyBush_opacity6: rgba(98, 41, 155, 0.6);
+
+$c-Malibu: #61dafb;
+$c-BlueRibbon: #0065FF;
+$c-ScienceBlue: #0A52D1;
+$c-ScienceBlue_opacity8: rgba(10, 82, 209, 0.8);
+$c-ToreaBay: #0E388B;
+$c-GulfBlue: #070E5F;
+$c-BlackRock: #20053b;
+
+$c-PastelGreen: rgb(109, 217, 118);
+$c-PastelGreen_opacity8: rgba(109, 217, 118, 0.8);
+$c-Apple: #37C843;
+
+$c-Apricot: #E49362;
+
+$c-Japonica: rgb(217, 109, 119);
+$c-Japonica_opacity8: rgba(217, 109, 119, 0.8);
+$c-Thunderbird: #C1151F;
+
+$c-CoralReef: #C5B79B;
+$c-CoralReef_opacity8: rgba(197, 183, 155, 0.8);
+$c-WoodyBrown: #382A29;
+$c-CocoaBrown: #231B1A;
+
+/*paddings, margins
+****************************************************************/
+
+$space-xxx-small: 2vw;
+$space-xx-small: 4vw;
+$space-x-small: 6vw;
+
+/*breaks
+****************************************************************/
+$break-high: 1250px;
+
+
+/*fonts
+****************************************************************/
+$f-baseFontFamily: 'Roboto',
+sans-serif;
+
+/*buttons
+****************************************************************/
+$button-small: 175px;
+$squareButton: 4vh;

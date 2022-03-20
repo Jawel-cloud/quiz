@@ -1,0 +1,55 @@
+@function pxToRem($pxsize, $rembase:16) {
+    @return($pxsize / $rembase)+rem;
+}
+
+//  font-size: 19px;  => :pxToRem(19);  lub  :pxToRem($space-large); 
+
+@mixin boxShadow ($arg) {
+    box-shadow: $arg;
+    -webkit-box-shadow: $arg;
+}
+
+// @include boxShadow(argumenty);
+
+
+@mixin widHeiPadMar ($width, $height, $padding:false, $margin:false) {
+    width: $width;
+    height: $height;
+    padding: $padding;
+    margin: $margin;
+}
+
+//    @include widHeiPadMar(2vw, 2vw, 0 2.4vw 0.9vw 0.3vw, 2vw 0 3vw 0); // padding/margin: (t r b l)
+
+@mixin positionYX ($position, $top, $left:false) {
+    position: $position;
+    top: $top;
+    left: $left;
+}
+
+//@include positionYX(absolute, 2vw, 2vw);
+
+@mixin myFlex() {
+    $prefixes: (-webkit-box, -ms-flexbox, -webkit-flex, flex);
+
+    @each $prefix in $prefixes {
+        display: $prefix;
+    }
+}
+
+//@include myFlex();
+
+@mixin createFlex($flexDirection: false, $boxD:false, $boxO:false, $flexB:false) {
+    @if $flexDirection {
+        -webkit-box-orient: $boxO;
+        -webkit-box-direction: $boxD;
+        -ms-flex-direction: $flexDirection;
+        flex-direction: $flexDirection
+    }
+
+    @if flexB {
+        ms-flex-preffered-size: $flexB;
+        flex-basis: $flexB;
+    }
+
+}
